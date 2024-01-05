@@ -19,27 +19,37 @@ import java.util.List;
 @Builder
 public class Product {
     @Id
-    @Column(name = "product_id",length = 5)
+    @Column(name = "product_id",columnDefinition = "char(5)")
     private String productId;
+
     @Column(name = "productName")
     private String productName;
+
     @Column(name = "price")
     private float price;
+
     @Column(name = "title")
     private String title;
+
     @Column(name = "description")
     private String description;
+
     @Column(name = "created")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date created;
+
     @Column(name = "image")
     private String image;
+
     @OneToMany(mappedBy = "product")
     private List<Image> imageList;
+
     @Column(name = "unit")
     private String unit;
+
     @Column(name = "status")
     private boolean status;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "catalog_id", referencedColumnName = "catalog_id")
     private Categories catalog;

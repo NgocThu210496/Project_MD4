@@ -16,14 +16,18 @@ import java.util.List;
 @Builder
 public class Categories {
     @Id
-    @Column(name = "catalog_id",length = 5)
+    @Column(name = "catalog_id",columnDefinition = "char(5)")
     private String catalogId;
+
     @Column(name = "catalog_name")
     private String catalogName;
+
     @Column(name = "description")
     private String description;
+
     @Column(name = "status")
     private boolean status;
+
     @OneToMany(mappedBy = "catalog",fetch = FetchType.EAGER)
     private List<Product> listProduct;
 }

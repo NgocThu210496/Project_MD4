@@ -18,16 +18,22 @@ public class Bill {
     @Column(name = "bill_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int billId;
-    @Column(name = "order_id")
-    private String orderId;
-    @Column(name = "product_id")
-    private String productId;
+
+    @ManyToOne
+    @JoinColumn(name="productId")
+    private Product product;
+
     @Column(name = "price")
     private float price;
+
     @Column(name = "quantity")
     private int quantity;
+
     @Column(name = "total")
     private float total;
-    @OneToMany(mappedBy = "bill")
-    private List<Order> orderList;
+
+    // Mỗi Bill có nhiều Order (mối quan hệ một-đến-nhiều)
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Order order;
 }

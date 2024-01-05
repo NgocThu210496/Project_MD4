@@ -17,8 +17,10 @@ public class Image {
     @Column(name = "image_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int imageId;
+
     @Column(name = "path")
     private String path;
+
     @ManyToOne
     @JoinColumn(name = "product_id",referencedColumnName = "product_id")
     private Product product;

@@ -25,13 +25,13 @@ import java.util.Properties;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"com.ra.controller","com.ra.serviceImp","com.ra.model","com.ra.repository","com.ra.config"})
+@ComponentScan(basePackages = {"com.ra"})
 @EnableJpaRepositories("com.ra.repository")
 public class AppConfig  implements WebMvcConfigurer {
     @Bean
     public ViewResolver viewResolver(){
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/views/");
+        resolver.setPrefix("/resources/views/");
         resolver.setSuffix(".jsp");
         return resolver;
     }
