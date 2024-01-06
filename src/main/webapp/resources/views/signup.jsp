@@ -25,8 +25,8 @@
 <body>
 <%--start--%>
 <div class="form-screen">
-  <a href="index.html" class="easion-logo"
-  ><i class="fas fa-dice"></i> <span>NgocDuc</span></a
+  <a href="index.jsp" class="easion-logo"
+  ><i class="fas fa-dice"></i> <span>ThuNguyen</span></a
   >
   <div class="card account-dialog">
     <div class="card-header bg-primary text-white">Create an account</div>

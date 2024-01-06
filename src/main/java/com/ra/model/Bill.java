@@ -36,4 +36,5 @@ public class Bill {
     @ManyToOne
     @JoinColumn(name = "order_id")
     private Order order;
+
 }

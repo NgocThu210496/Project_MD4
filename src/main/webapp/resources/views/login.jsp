@@ -26,8 +26,8 @@
 <body>
 <%--start--%>
 <div class="form-screen">
-    <a href="index.html" class="easion-logo"
-    ><i class="fas fa-dice"></i><span>NgocDuc</span></a
+    <a href="index.jsp" class="easion-logo"
+    ><i class="fas fa-dice"></i><span>Thu Nguyen</span></a
     >
     <div class="card account-dialog">
         <div class="card-header bg-primary text-white">Please sign in</div>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="account-dialog-actions">
                     <button type="submit" class="btn btn-primary">Sign in</button>
-                    <a class="account-dialog-link" href="signup.html"
+                    <a class="account-dialog-link" href="signup.jsp"
                     >Create a new account</a
                     >
                 </div>

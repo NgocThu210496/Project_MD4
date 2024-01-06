@@ -160,8 +160,8 @@
                   <thead>
                   <tr class="bg-secondary text-light">
                     <th scope="col">No</th>
-                    <th scope="col">Order Id</th>
-                    <th scope="col">Account Id</th>
+                    <th scope="col">Email </th> <%--da. --%>
+                    <th scope="col">Account Name</th>
                     <th scope="col">Create</th>
                     <th scope="col">Status</th>
                     <th scope="col">Action</th>

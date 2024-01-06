@@ -1,6 +1,8 @@
 package com.ra.service;
 
-import java.awt.*;
+
+import com.ra.model.Image;
+
 import java.util.List;
 
 public interface ImageService {
@@ -10,6 +12,6 @@ public interface ImageService {
 
     Image findById(int id);
     boolean delete(int id);
-    boolean save(Image image);
+    boolean save(Image image );
     Image findByProduct_ProductId(String productId);
 }

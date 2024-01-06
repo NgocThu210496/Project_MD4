@@ -109,7 +109,7 @@
                   aria-labelledby="dropdownMenu1"
           >
             <a class="dropdown-item" href="#!">Profile</a>
-            <a class="dropdown-item" href="login.html">Logout</a>
+            <a class="dropdown-item" href="login.jsp">Logout</a>
           </div>
         </div>
       </div>
@@ -162,7 +162,7 @@
                 <table class="table table-bordered table-in-card">
                   <thead>
                   <tr class="bg-secondary text-light">
-                    <th scope="col">#</th>
+                    <th scope="col">No</th>
                     <th scope="col">Account Id</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>

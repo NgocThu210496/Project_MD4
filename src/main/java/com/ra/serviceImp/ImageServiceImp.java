@@ -1,5 +1,6 @@
 package com.ra.serviceImp;
 
+import com.ra.model.Image;
 import com.ra.repository.ImageRepository;
 import com.ra.service.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.awt.*;
+
 import java.util.ArrayList;
 import java.util.List;
 

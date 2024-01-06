@@ -60,9 +60,9 @@ public class DashboardController {
                 approve.getAndIncrement();
             }
         });
-        float revenueDay = orderService.getRevenueDay();
+        /*float revenueDay = orderService.getRevenueDay();
         float revenueMonth = orderService.getRevenueMonth();
-        float revenueYear = orderService.getRevenueYear();
+        float revenueYear = orderService.getRevenueYear();*/
 
         mav.addObject("accountList", accountList);
         mav.addObject("activeCount", activeCount);
@@ -76,9 +76,9 @@ public class DashboardController {
         mav.addObject("received", received);
         mav.addObject("cancel", cancel);
         mav.addObject("approve", approve);
-        mav.addObject("revenueDay", revenueDay);
+  /*      mav.addObject("revenueDay", revenueDay);
         mav.addObject("revenueMonth", revenueMonth);
-        mav.addObject("revenueYear", revenueYear);
+        mav.addObject("revenueYear", revenueYear);*/
         return mav;
     }
 }

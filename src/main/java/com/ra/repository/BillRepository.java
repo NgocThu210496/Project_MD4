@@ -17,4 +17,6 @@ public interface BillRepository extends JpaRepository<Bill,Integer> {
     Page<Bill> findByProductId(String productId, Pageable pageable);
     int countByProductProductId(String productId);
     List<Bill> findAllBy();
+
+    List<Bill> findAllByOrder_OrderId(String orderId);
 }

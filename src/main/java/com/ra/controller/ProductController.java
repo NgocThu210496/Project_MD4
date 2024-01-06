@@ -1,6 +1,7 @@
 package com.ra.controller;
 
 import com.ra.model.Categories;
+import com.ra.model.Image;
 import com.ra.model.Product;
 import com.ra.service.CategoriesService;
 import com.ra.service.ImageService;
@@ -14,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -73,7 +73,7 @@ public class ProductController {
 
         return mav;
     }
-
+// dc roi thay
     @PostMapping(value = "/create&Update")
     public String create(Product product, MultipartFile productImage, MultipartFile[] subImages) {
         if (productImage != null) {

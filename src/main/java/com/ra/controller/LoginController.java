@@ -16,7 +16,7 @@ public class LoginController {
     private AccountService accountService;
     @GetMapping(value = "/findAll")
     public ModelAndView loginView(){
-        ModelAndView mav = new ModelAndView("login");
+        ModelAndView mav = new ModelAndView("/login");
         return mav;
     }
     @PostMapping(value = "/check")

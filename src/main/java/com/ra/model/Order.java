@@ -23,19 +23,23 @@ public class Order {
 
     //Mỗi Order liên quan đến một Account (mối quan hệ nhiều-đến-một)
     @ManyToOne
-    @JoinColumn(name = "account_id",referencedColumnName = "account_id")
+    @JoinColumn(name = "account_id")
     private Account account;
 
 
     @Column(name = "created")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date created;
+    private Date created = new Date();
 
     @Column(name = "status")
     private String status;
 
     //Mỗi Order thuộc về một Bill (mối quan hệ nhiều-đến-một)
-    /*@ManyToOne
+/*    @ManyToOne
     @JoinColumn(name = "bill_id", referencedColumnName = "bill_id")
-    private List<Bill bill;*/
+   // private Bill bill;
+    private List<Bill> listbill;*/
+
+    @OneToMany(mappedBy = "order",fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    private List<Bill> listBill;
 }
