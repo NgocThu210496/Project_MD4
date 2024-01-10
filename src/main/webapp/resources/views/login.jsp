@@ -23,11 +23,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
     <title>Home</title>
 </head>
-<body>
+<body class="align">
 <%--start--%>
 <div class="form-screen">
     <a href="index.jsp" class="easion-logo"
-    ><i class="fas fa-dice"></i><span>Thu Nguyen</span></a
+    ><i class="fas fa-user" style="color: #3f84fc"></i><span>Thu Nguyen</span></a
     >
     <div class="card account-dialog">
         <div class="card-header bg-primary text-white">Please sign in</div>
@@ -74,6 +74,8 @@
         </div>
     </div>
 </div>
+<%-----------------------------------------%>
+
 <%--end--%>
 
 <%--js--%>

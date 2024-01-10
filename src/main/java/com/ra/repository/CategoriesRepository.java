@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface CategoriesRepository extends JpaRepository<Categories,String> {
     @Query("select c from Categories c where c.catalogName like %?1%")
-    Page<Categories> findByCatalogName(String catalogName, Pageable pageable);
+    Page<Categories> findByCatalogName(String catalogName, Pageable pageable); //thầy chờ e tí
     int countByCatalogNameContains(String catalogName);
     List<Categories> findAllBy();
 }

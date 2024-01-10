@@ -11,17 +11,20 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface AccountRepository extends JpaRepository <Account,Integer> {
     @Query("select a from Account a where a.email like %?1%")
     Page<Account> findByEmail(String email, Pageable pageable);
 
-    @Query("select a from Account a where a.status = false")
+   /* @Query("select a from Account a where a.status = false")
     List<Account> findAccountByStatusFalse();
 
     @Query("select a from Account a where a.status = true")
-    List<Account> findAccountByStatusTrue();
+    List<Account> findAccountByStatusTrue();*/
+
+    List<Account> findAllByStatus(boolean status);
 
     int countByEmailContains(String email);
 
@@ -47,4 +50,6 @@ public interface AccountRepository extends JpaRepository <Account,Integer> {
 
         return updatedRows > 0;
     }
+
+    Optional<Account> findByEmailAndPassword(String email,String password);
 }

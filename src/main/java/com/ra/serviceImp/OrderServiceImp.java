@@ -50,16 +50,16 @@ public class OrderServiceImp implements OrderService {
 
     @Override
     public float getRevenueDay() {
-        return orderRepository.getRevenueDay();
+        return orderRepository.getRevenueDay().orElse(0.0F); //nếu là null thì trả về 0.0
     }
 
     @Override
     public float getRevenueMonth() {
-        return orderRepository.getRevenueMonth();
+        return orderRepository.getRevenueMonth().orElse(0.0F);
     }
 
     @Override
     public float getRevenueYear() {
-        return orderRepository.getRevenueYear();
+        return orderRepository.getRevenueYear().orElse(0.0F);
     }
 }

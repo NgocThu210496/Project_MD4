@@ -8,6 +8,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface OrderRepository extends JpaRepository<Order,String> {
     @Query("select o from Order o where o.orderId like %?1%")
@@ -17,11 +19,11 @@ public interface OrderRepository extends JpaRepository<Order,String> {
     int countByOrderId(String orderId);
 
     @Query("select sum(b.total) from Order o join Bill b on o.orderId = b.order.orderId where o.status = 'received' and DAY(current_date) = DAY(o.created)")
-    float getRevenueDay();
+    Optional <Float> getRevenueDay();
 
     @Query("select sum(b.total) from Order o join Bill b on o.orderId = b.order.orderId where o.status = 'received' and MONTH (current_date) = MONTH (o.created)")
-    float getRevenueMonth();
+    Optional<Float> getRevenueMonth();
 
     @Query("select sum(b.total) from Order o join Bill b on o.orderId = b.order.orderId where o.status = 'received' and year (current_date) = year (o.created)")
-    float getRevenueYear();
+    Optional<Float> getRevenueYear();
 }

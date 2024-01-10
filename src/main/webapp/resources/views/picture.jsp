@@ -85,10 +85,10 @@
         >
           <i class="fab fa-github"></i>
         </a>
-        <a href="#!" class="tools-item">
+<%--        <a href="#!" class="tools-item">
           <i class="fas fa-bell"></i>
           <i class="tools-item-count">4</i>
-        </a>
+        </a>--%>
         <div class="dropdown tools-item">
           <a
                   href="#"
@@ -105,7 +105,7 @@
                   aria-labelledby="dropdownMenu1"
           >
             <a class="dropdown-item" href="#!">Profile</a>
-            <a class="dropdown-item" href="login.html">Logout</a>
+            <a class="dropdown-item" href="login.jsp">Logout</a>
           </div>
         </div>
       </div>
@@ -169,7 +169,7 @@
                     <tr>
                       <th scope="row">${stt}</th>
                       <td>${image.imageId}</td>
-                      <td>${image.path}</td>
+                      <td><img src="${image.path}" alt=""></td>
                       <td>${image.product.productId}</td>
                       <td>
                           <%--                                                <button--%>

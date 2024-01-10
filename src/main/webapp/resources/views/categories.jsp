@@ -85,10 +85,10 @@
                 >
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="#!" class="tools-item">
+<%--                <a href="#!" class="tools-item">
                     <i class="fas fa-bell"></i>
                     <i class="tools-item-count">4</i>
-                </a>
+                </a>--%>
                 <div class="dropdown tools-item">
                     <a
                             href="#"
@@ -312,22 +312,32 @@
                                             <td>${catalog.description}</td>
                                             <td>${catalog.status?"active":"inactive"}</td>
                                             <td>
+
                                                 <button
                                                         type="button"
-                                                        class="border-0"
-                                                        id="model-button"
+                                                        class="border-0 model-button bg-warning"
+                                                    <%--id="model-button"--%>
                                                 >
                                                     <a href="<%=request.getContextPath()%>/categoriesController/findAll?id=${catalog.catalogId}"
-                                                    ><span class="badge badge-pill badge-warning"
-                                                    >Update</span
-                                                    ></a
+                                                    > Update</a
                                                     >
                                                 </button>
-                                                <a href="<%=request.getContextPath()%>/categoriesController/delete?id=${catalog.catalogId}"
+
+                                               <%-- <a href="<%=request.getContextPath()%>/categoriesController/delete?id=${catalog.catalogId}"
                                                 ><span class="badge badge-pill badge-danger"
                                                 >Delete</span
                                                 ></a
+                                                >--%>
+                                                <button
+                                                        type="button"
+                                                        class="border-0 model-button bg-danger"
+                                                    <%--id="model-button"--%>
                                                 >
+                                                    <a href="<%=request.getContextPath()%>/categoriesController/delete?id=${catalog.catalogId}"
+                                                    ><%--<span class="badge badge-pill badge-danger" style="margin-right: 5px"
+                        >Delete</span--%>
+                                                        Status</a
+                                                    ></button>
                                             </td>
                                         </tr>
                                     </c:forEach>
@@ -473,7 +483,7 @@
 <script>
     function changeSortBy(){
         let sortBy = document.getElementById("sortBy").value;
-        //Gọi controller
+        /*Gọi controller*/
         window.location="findAll?sortBy="+sortBy;
     }
     function changeDirection(){

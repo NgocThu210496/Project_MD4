@@ -43,7 +43,7 @@
         <i class="fas fa-bars"></i>
       </a>
       <a href="<%=request.getContextPath()%>/dashboardController/findAll" class="easion-logo"
-      ><i class="fas fa-dice"></i><span>Admin</span></a
+      ><i class="fas fa-user"></i><span>Admin</span></a
       >
     </header>
     <nav class="dash-nav-list">
@@ -91,16 +91,16 @@
       </form>
       <div class="tools">
         <a
-                href="https://github.com/subet/easion"
+                href="https://github.com/NgocThu210496/Project_MD4.git"
                 target="_blank"
                 class="tools-item"
         >
           <i class="fab fa-github"></i>
         </a>
-        <a href="#!" class="tools-item">
+<%--        <a href="#!" class="tools-item">
           <i class="fas fa-bell"></i>
           <i class="tools-item-count">4</i>
-        </a>
+        </a>--%>
         <div class="dropdown tools-item">
           <a
                   href="#"
@@ -117,7 +117,7 @@
                   aria-labelledby="dropdownMenu1"
           >
             <a class="dropdown-item" href="#!">Profile</a>
-            <a class="dropdown-item" href="login.html">Logout</a>
+            <a class="dropdown-item" href="http://localhost:8081/loginController/findAll">Logout</a>
           </div>
         </div>
       </div>
@@ -128,7 +128,7 @@
         <div class="row dash-row">
           <!-- Account -->
           <div class="col-xl-6">
-            <div class="stats stats-primary">
+            <div class="stats stats-primary"  style="background-color: #FF8247; border-radius: 30px" >
               <h3 class="stats-title">Account</h3>
               <div class="stats-content">
                 <div class="stats-icon">
@@ -149,7 +149,7 @@
           </div>
           <!-- Product -->
           <div class="col-xl-6">
-            <div class="stats stats-success">
+            <div class="stats stats-success" style="border-radius: 30px; background-color: #20c997">
               <h3 class="stats-title">Product</h3>
               <div class="stats-content">
                 <div class="stats-icon">
@@ -169,7 +169,7 @@
           </div>
           <!-- Revenue -->
           <div class="col-xl-6">
-            <div class="stats stats-secondary">
+            <div class="stats stats-secondary" style="background-color: #6699FF;border-radius: 30px">
               <h3 class="stats-title">Revenue</h3>
               <div class="stats-content">
                 <div class="stats-icon">
@@ -191,7 +191,7 @@
           </div>
           <!-- order -->
           <div class="col-xl-6">
-            <div class="stats stats-light">
+            <div class="stats stats-light" style="border-radius: 30px;background-color: #fd9c9b; color: #fff">
               <h3 class="stats-title">Order</h3>
               <div class="stats-content">
                 <div class="stats-icon">

@@ -13,8 +13,7 @@ import java.util.List;
 
 @Repository
 public interface BillRepository extends JpaRepository<Bill,Integer> {
-    @Query("select c from Bill c where c.product.productId like %?1%")
-    Page<Bill> findByProductId(String productId, Pageable pageable);
+    Page<Bill> findAllByProductProductId(String productId, Pageable pageable);
     int countByProductProductId(String productId);
     List<Bill> findAllBy();
 

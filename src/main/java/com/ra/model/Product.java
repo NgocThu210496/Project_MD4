@@ -40,8 +40,8 @@ public class Product {
     @Column(name = "image")
     private String image;
 
-    @OneToMany(mappedBy = "product")
-    private List<Image> imageList;
+/*    @OneToMany(mappedBy = "product")
+    private List<Image> imag;*/
 
     @Column(name = "unit")
     private String unit;

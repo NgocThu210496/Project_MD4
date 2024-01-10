@@ -32,8 +32,8 @@ public class DashboardController {
     public ModelAndView findAll() {
         ModelAndView mav = new ModelAndView("dashboard");
         List<Account> accountList = accountService.findAll();
-        List<Account> activeCount = accountService.findFalse();
-        List<Account> inActiveCount = accountService.findTrue();
+        List<Account> activeCount = accountService.findTrue();
+        List<Account> inActiveCount = accountService.findFalse();;
         List<Product> productList = productService.findAll();
         List<Product> activeProduct = productService.findTrue();
         List<Product> inActiveProduct = productService.findFalse();
@@ -43,7 +43,7 @@ public class DashboardController {
         AtomicInteger received = new AtomicInteger();
         AtomicInteger approve = new AtomicInteger();
         AtomicInteger cancel = new AtomicInteger();
-        orderList.stream().forEach(x -> {
+        orderList.forEach(x -> {
             if (x.getStatus().equals("waiting")) {
                 waiting.getAndIncrement();
             }
@@ -60,9 +60,9 @@ public class DashboardController {
                 approve.getAndIncrement();
             }
         });
-        /*float revenueDay = orderService.getRevenueDay();
-        float revenueMonth = orderService.getRevenueMonth();
-        float revenueYear = orderService.getRevenueYear();*/
+        float revenueDay = ( orderService.getRevenueDay());
+        String revenueMonth = String.valueOf(orderService.getRevenueMonth());
+        String revenueYear = String.valueOf(orderService.getRevenueYear());
 
         mav.addObject("accountList", accountList);
         mav.addObject("activeCount", activeCount);
@@ -76,9 +76,9 @@ public class DashboardController {
         mav.addObject("received", received);
         mav.addObject("cancel", cancel);
         mav.addObject("approve", approve);
-  /*      mav.addObject("revenueDay", revenueDay);
+        mav.addObject("revenueDay", revenueDay);
         mav.addObject("revenueMonth", revenueMonth);
-        mav.addObject("revenueYear", revenueYear);*/
+        mav.addObject("revenueYear", revenueYear);
         return mav;
     }
 }

@@ -15,4 +15,5 @@ public interface CategoriesService {
 
     boolean delete(String id);
     List<Categories> findAll();
+
 }

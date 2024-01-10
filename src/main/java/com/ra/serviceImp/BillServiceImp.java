@@ -25,8 +25,13 @@ public class BillServiceImp implements BillService {
                 direction.equals("ASC")? Sort.Direction.ASC: Sort.Direction.DESC,sortBy);
 
        // List<Bill> billList;
-        Page<Bill> billList = billRepository.findByProductId(productId,pageable);
+        Page<Bill> billList = billRepository.findAllByProductProductId(productId,pageable);
 
+        if(productId.isEmpty()) {
+            billList = billRepository.findAll(pageable);
+        } else {
+            billList = billRepository.findAllByProductProductId(productId,pageable);
+        }
 
         return billList;
     }

@@ -87,10 +87,10 @@
         >
           <i class="fab fa-github"></i>
         </a>
-        <a href="#!" class="tools-item">
+<%--        <a href="#!" class="tools-item">
           <i class="fas fa-bell"></i>
           <i class="tools-item-count">4</i>
-        </a>
+        </a>--%>
         <div class="dropdown tools-item">
           <a
                   href="#"
@@ -163,7 +163,7 @@
                     <th scope="col">Product Id</th>
                     <th scope="col" >Price(buy)</th>
                     <th scope="col" >Quantity</th>
-                    <th scope="col" >Total(P*Q)($:Dollar)</th>
+                    <th scope="col" >Total</th>
                     <%--                                        <th scope="col" >Action</th>--%>
                   </tr>
                   </thead>
@@ -174,8 +174,8 @@
                     <tr>
                       <th scope="row">${stt}</th>
                       <td>${bill.billId}</td>
-                      <td>${bill.orderId}</td>
-                      <td>${bill.productId}</td>
+                      <td>${bill.order.orderId}</td>
+                      <td>${bill.product.productId}</td>
                       <td>${bill.price}</td>
                       <td>${bill.quantity}</td>
                       <td>${bill.total}</td>

@@ -89,10 +89,10 @@
         >
           <i class="fab fa-github"></i>
         </a>
-        <a href="#!" class="tools-item">
+<%--        <a href="#!" class="tools-item">
           <i class="fas fa-bell"></i>
           <i class="tools-item-count">4</i>
-        </a>
+        </a>--%>
         <div class="dropdown tools-item">
           <a
                   href="#"
@@ -109,7 +109,7 @@
                   aria-labelledby="dropdownMenu1"
           >
             <a class="dropdown-item" href="#!">Profile</a>
-            <a class="dropdown-item" href="login.html">Logout</a>
+            <a class="dropdown-item" href="login.jsp">Logout</a>
           </div>
         </div>
       </div>
@@ -160,7 +160,8 @@
                   <thead>
                   <tr class="bg-secondary text-light">
                     <th scope="col">No</th>
-                    <th scope="col">Email </th> <%--da. --%>
+                    <th scope="col">OrderId</th>
+                    <th scope="col">Email </th>
                     <th scope="col">Account Name</th>
                     <th scope="col">Create</th>
                     <th scope="col">Status</th>
@@ -174,7 +175,8 @@
                     <tr>
                       <th scope="row">${stt}</th>
                       <td>${order.orderId}</td>
-                      <td>${order.accountId}</td>
+                      <td>${order.account.email}</td>
+                      <td>${order.account.name}</td>
                       <td><fmt:formatDate value="${order.created}" pattern="dd/MM/yyyy"/></td>
                       <td>${order.status}</td>
                       <td>

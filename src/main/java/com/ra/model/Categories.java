@@ -28,6 +28,6 @@ public class Categories {
     @Column(name = "status")
     private boolean status;
 
-    @OneToMany(mappedBy = "catalog",fetch = FetchType.EAGER)
-    private List<Product> listProduct;
+/*    @OneToMany(mappedBy = "catalog",fetch = FetchType.EAGER)
+    private List<Product> listProduct;*/
 }

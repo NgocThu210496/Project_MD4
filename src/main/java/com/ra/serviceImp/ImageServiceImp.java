@@ -22,8 +22,13 @@ public class ImageServiceImp implements ImageService {
     public List<Image> displayData(String id, int page, int size, String direction, String sortBy) {
         Pageable pageable = PageRequest.of(page,size,
                 direction.equals("ASC")? Sort.Direction.ASC: Sort.Direction.DESC,sortBy);
-        System.out.println(id);
-        List<Image> imageList = imageRepository.findByProduct_ProductId(id,pageable).getContent();
+        List<Image> imageList;
+        if(id.isEmpty()) {
+            imageList  = imageRepository.findAll(pageable).getContent();
+        } else {
+            imageList = imageRepository.findByProduct_ProductId(id,pageable).getContent();
+        }
+
         System.out.println(id);
         System.out.println(imageList);
         return imageList;

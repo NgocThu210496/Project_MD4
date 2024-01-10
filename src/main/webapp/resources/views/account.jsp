@@ -89,10 +89,10 @@
         >
           <i class="fab fa-github"></i>
         </a>
-        <a href="#!" class="tools-item">
+<%--        <a href="#!" class="tools-item">
           <i class="fas fa-bell"></i>
           <i class="tools-item-count">4</i>
-        </a>
+        </a>--%>
         <div class="dropdown tools-item">
           <a
                   href="#"

@@ -20,7 +20,7 @@ public class ImageController {
     private ImageService imageService;
     @Autowired
     private UploadFileService uploadFileService;
-    private static final int SIZE = 5;
+    private static final int SIZE = 3;
     private static String nameDefault="" ;
     private static String directionDefault = "ASC";
     private static String sortByDefault = "imageId" ;

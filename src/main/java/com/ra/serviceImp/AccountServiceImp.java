@@ -60,12 +60,12 @@ public class AccountServiceImp implements AccountService {
 
     @Override
     public List<Account> findFalse() {
-        return accountRepository.findAccountByStatusFalse();
+        return accountRepository.findAllByStatus(false);
     }
 
     @Override
     public List<Account> findTrue() {
-        return accountRepository.findAccountByStatusTrue();
+        return accountRepository.findAllByStatus(true);
     }
 
     @Override

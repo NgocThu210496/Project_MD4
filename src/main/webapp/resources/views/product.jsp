@@ -88,10 +88,10 @@
         >
           <i class="fab fa-github"></i>
         </a>
-        <a href="#!" class="tools-item">
+<%--        <a href="#!" class="tools-item">
           <i class="fas fa-bell"></i>
           <i class="tools-item-count">4</i>
-        </a>
+        </a>--%>
         <div class="dropdown tools-item">
           <a
                   href="#"
@@ -434,26 +434,35 @@
                       <td>
                         <button
                                 type="button"
-                                class="border-0"
-                                id="model-button"
+                                class="border-0 model-button bg-warning"
+                                <%--id="model-button"--%>
                         >
                           <a href="<%=request.getContextPath()%>/productController/findAll?id=${product.productId}"
-                          ><span class="badge badge-pill badge-warning"
-                          >Update</span
-                          ></a
+                         > Update</a
                           >
                         </button>
-                        <a href="<%=request.getContextPath()%>/productController/delete?id=${product.productId}"
-                        ><span class="badge badge-pill badge-danger" style="margin-right: 5px"
-                        >Delete</span
-                        ></a
-                        ><a onclick="showDetail()" id="showDetailHover"
-                            href="<%=request.getContextPath()%>/productController/findAll?detail=${product.productId}"
-                      ><span class="badge badge-pill badge-success"
-                      >Detail</span
-                      ></a
-                      >
 
+                        <button
+                                type="button"
+                                class="border-0 model-button bg-danger"
+                          <%--id="model-button"--%>
+                        >
+                        <a href="<%=request.getContextPath()%>/productController/delete?id=${product.productId}"
+                        ><%--<span class="badge badge-pill badge-danger" style="margin-right: 5px"
+                        >Delete</span--%>
+                        Delete</a
+                        ></button>
+                        <button
+                                type="button"
+                                class="border-0 model-button bg-success"
+                                style="display: none"
+                        >
+                        <a onclick="showDetail()" id="showDetailHover"
+                            href="<%=request.getContextPath()%>/productController/findAll?detail=${product.productId}"
+                      >
+                      Detail</a
+                      >
+                        </button>
                       </td>
                     </tr>
                   </c:forEach>
@@ -684,7 +693,7 @@
       <%-- modal detail start--%>
       <!-- Large modal -->
       <div class="container mt-5 mb-5 position-absolute" id="detailModal"
-           style="top: 40px;">
+           style="top: 40px; display: none">
         <div class="row d-flex justify-content-center">
           <div class="col-md-12">
             <div class="card">
@@ -727,10 +736,12 @@
                           <span>40% OFF</span></div>
                       </div>
                     </div>
-                    <p class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                      commodo consequat. </p>
+                    <p class="about">Lectus in necessitatibus doloribus in mus
+                      quis nunc vehicula voluptates molestiae curae autem feugiat incidunt illum, turpis atque,
+                      nulla purus itaque irure magnam aenean,
+                      augue parturient turpis sodales eligendi maecenas quae! Ornare dicta! Malesuada?
+                      Rutrum curabitur wisi quisquam arcu aliquet? Pariatur sequi, repellat facilisis delectus curabitur pretium facilisis,
+                      vitae pulvinar habitasse lectus beatae aliquet!  </p>
                     <div class="sizes mt-5">
                       <h6 class="text-uppercase">Size</h6> <label class="radio"> <input
                             type="radio" name="size" value="S" checked> <span>S</span> </label>

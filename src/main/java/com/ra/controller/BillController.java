@@ -21,7 +21,7 @@ public class BillController {
     private static final int SIZE = 5;
     private static String nameDefault = "";
     private static String directionDefault = "ASC";
-    private static String sortByDefault = "orderId";
+    private static String sortByDefault = "billId";
     private static int pageDefault = 1;
 
     @GetMapping("/findAll")
@@ -38,7 +38,7 @@ public class BillController {
                 directionDefault, sortByDefault);
         //Lấy ra danh sách các trang theo kết quả tìm kiếm
         List<Integer> listPages = billService.getListPage(nameDefault, SIZE);
-        mav.addObject("billList", billList);
+        mav.addObject("billList", billList.getContent());
         mav.addObject("listPages", listPages);
         mav.addObject("productId", nameDefault);
         mav.addObject("sortBy", sortByDefault);

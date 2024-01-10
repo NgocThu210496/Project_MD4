@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Formula;
 
 import javax.persistence.*;
 import java.util.List;
@@ -29,7 +30,7 @@ public class Bill {
     @Column(name = "quantity")
     private int quantity;
 
-    @Column(name = "total")
+    @Formula("price * quantity")
     private float total;
 
     // Mỗi Bill có nhiều Order (mối quan hệ một-đến-nhiều)

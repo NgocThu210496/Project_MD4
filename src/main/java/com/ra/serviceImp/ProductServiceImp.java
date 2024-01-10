@@ -68,11 +68,11 @@ public class ProductServiceImp implements ProductService {
 
     @Override
     public List<Product> findFalse() {
-        return productRepository.findAccountByStatusFalse();
+        return productRepository.findAllByStatus(false);
     }
 
     @Override
     public List<Product> findTrue() {
-        return productRepository.findAccountByStatusTrue();
+        return productRepository.findAllByStatus(true);
     }
 }

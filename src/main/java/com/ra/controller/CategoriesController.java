@@ -4,10 +4,7 @@ import com.ra.model.Categories;
 import com.ra.service.CategoriesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -19,7 +16,7 @@ public class CategoriesController {
     @Autowired
     private CategoriesService categoriesService;
 
-    private static final int SIZE = 5;
+    private static final int SIZE = 3;
     private static String nameDefault = "";
     private static String directionDefault = "ASC";
     private static String sortByDefault = "catalogName";
@@ -62,11 +59,11 @@ public class CategoriesController {
     }
 
     @GetMapping(value = "/delete")
-    public String delete(String id) {
+    public String delete(@RequestParam("id") String id) {
         //Thực hiện gọi sang service thực hiện thêm mới
         boolean result = categoriesService.delete(id);
         if(result){
-            return "redirect:/findAll";
+            return "redirect:/categoriesController/findAll";
         } else {
             return "error";
         }
